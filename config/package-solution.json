@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "ps-change-management-client-side-solution",
+    "id": "f77edbfa-f9f8-4341-b4aa-f95e8a1cb6cc",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+     "webApiPermissionRequests": [
+      {
+        "resource": "api-fp-ps-cm",
+        "scope": "user_impersonation"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/ps-change-management.sppkg"
+  }
+}

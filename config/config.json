@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "ps-change-management-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/psChangeManagement/PsChangeManagementWebPart.js",
+          "manifest": "./src/webparts/psChangeManagement/PsChangeManagementWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PsChangeManagementWebPartStrings": "lib/webparts/psChangeManagement/loc/{locale}.js"
+  }
+}
