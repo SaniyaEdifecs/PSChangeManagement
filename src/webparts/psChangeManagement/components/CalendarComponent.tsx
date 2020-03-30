@@ -46,6 +46,8 @@ const CalendarComponent = ({ props }) => {
                 element['title'] = ReactHtmlParser(element['mrTITLE']);
                 if (element['mrSTATUS'] == 'Closed') {
                   element['className'] = "inactive" + " " + 'event' + element['mrID'];
+                } else if(element['mrSTATUS'] == 'Canceled'){
+                  element['className'] = "canceled" + " " + 'event' + element['mrID'];
                 }
                 else {
                   element['className'] = 'event' + element['mrID'];
