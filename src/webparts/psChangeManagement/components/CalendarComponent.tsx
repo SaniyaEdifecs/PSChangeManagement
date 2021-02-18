@@ -54,8 +54,8 @@ const CalendarComponent = ({ props }) => {
                 } else if(element['mrSTATUS'] == 'Canceled'){
                   element['className'] = "canceled" + " " + 'event' + element['mrID'];
                 }
-                else if(element['mrTITLE'].includes('**Edifecs Hosted Infrastructure Maintenance - Thursday, February 18***')){
-                  element['className'] = "cyan" + " " + 'event' + element['mrID'];
+                else if(element['mrTITLE'].includes('**Edifecs Hosted Infrastructure Maintenance ')){
+                  element['className'] = "green" + " " + 'event' + element['mrID'];
                   console.log('here');
                 }
                 else {
