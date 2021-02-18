@@ -38,16 +38,25 @@ const CalendarComponent = ({ props }) => {
           })
           .then((response: any): void => {
             if (response.data) {
+              console.log(response.data);
               setShowLoader(false);
               esdDetails = response.data;
               esdDetails.forEach(element => {
                 element['end'] = moment(element['Scheduled__bEnd']).utc().format();
                 element['start'] = moment(element['Scheduled__bStart']).utc().format();
                 element['title'] = ReactHtmlParser(element['mrTITLE']);
+                if(element['mrTITLE'].includes('**Edifecs Hosted Infrastructure Maintenance - Thursday, February 18***')){
+                  element['className'] = "cyan";
+                  console.log('here');''
+                }
                 if (element['mrSTATUS'] == 'Closed') {
                   element['className'] = "inactive" + " " + 'event' + element['mrID'];
                 } else if(element['mrSTATUS'] == 'Canceled'){
                   element['className'] = "canceled" + " " + 'event' + element['mrID'];
+                }
+                else if(element['mrTITLE'].includes('**Edifecs Hosted Infrastructure Maintenance - Thursday, February 18***')){
+                  element['className'] = "cyan" + " " + 'event' + element['mrID'];
+                  console.log('here');
                 }
                 else {
                   element['className'] = 'event' + element['mrID'];
